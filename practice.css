@@ -1,0 +1,115 @@
+body{
+    font-family: "Segoe UI", Arial, sans-serif;
+    background: linear-gradient(135deg, #74ebd5, #9face6);
+    min-height: 100vh;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.weatherForm{
+    display: flex;
+    gap: 12px;
+    margin-bottom: 32px;
+}
+.cityInput{
+    padding: 14px 18px;
+    font-size: 1.4rem;
+    border: none;
+    border-radius: 12px;
+    width: 260px;
+    outline: none;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.15);
+}
+button[type="submit"]{
+    padding: 14px 26px;
+    border-radius: 12px;
+    font-size: 1.4rem;
+    background-color: #00c853;
+    color: white;
+    border: none;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+button[type="submit"]:hover{
+    background-color: #00a843;
+    transform: translateY(-2px);
+    box-shadow: 0 6px 15px rgba(0,0,0,0.2);
+}
+.card{
+    background: linear-gradient(160deg, #1e3c72, #2a5298);
+    color: white;
+    padding: 40px 50px;
+    min-width: 320px;
+    border-radius: 20px;
+    box-shadow: 0 15px 30px rgba(0,0,0,0.3);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    animation: fadeIn 0.5s ease;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(15px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+h1{
+    font-size: 3.5rem;
+    margin-top:0;  
+    margin-bottom: 24px;
+}
+p{
+    font-size: 1.5rem;
+    margin:5px 0px;
+    
+}
+.cityDisplay{
+    font-size: 3rem;
+    margin-bottom: 12px;
+}
+
+.tempDisplay{
+    font-size: 4rem;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+.humidityDisplay{
+    font-size: 1.3rem;
+    opacity: 0.85;
+}
+
+.descDisplay{
+    font-size: 1.6rem;
+    margin-top: 12px;
+    text-transform: capitalize;
+}
+.weatherEmoji{
+    font-size: 6rem;
+    margin-top: 20px;
+    animation: float 2s ease-in-out infinite;
+}
+
+@keyframes float {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-8px); }
+}
+
+.errorDisplay{
+    font-size: 1.8rem;
+    font-weight: bold;
+    color: #ffecec;
+    padding: 20px;
+    border-radius: 12px;
+    text-align: center;
+}
